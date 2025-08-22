@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>solar loan</title>
+    <!-- google icon link -->
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- favicon link -->
+    <link rel="shortcut icon" href="./namdevfinvestprivatelimited_logo.jpg" type="image/x-icon" />
+
+    <!-- css bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+
+    <!-- Add Bootstrap and Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet" />
+    <style>
+        /* RESET */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: #f9f9fb;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* NAVBAR */
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: #fff;
+            padding: 5px 20px;
+            border-bottom: 1px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .navbar-heading {
+            flex: 1;
+            text-align: center;
+            font-size: 2rem;
+            font-weight: 600;
+            padding-right: 200PX;
+            color: #004aad;
+            /* balance logo width */
+        }
+
+        @media (max-width: 768px) {
+            .navbar-heading {
+                font-size: 1rem;
+                margin-right: 80px;
+            }
+
+            .navbar .logo img {
+                height: 45px;
+            }
+        }
+
+        /* HERO */
+        .hero {
+            background: linear-gradient(135deg, #004aad, #0077cc);
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .hero marquee {
+            font-size: 1.2rem;
+        }
+
+
+
+
+
+        /* SECTIONS */
+
+        /* Eligibility Cards */
+        .eligibility-section {
+            text-align: center;
+            padding: 30px 20px 0px 20px;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .eligibility-section h2 {
+            font-size: 30px;
+            font-weight: 700;
+            color: #2c2c54;
+
+        }
+
+        .eligibility-section .desc {
+            font-size: 16px;
+            line-height: 1.7;
+            color: black;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .eligibility-cards {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            padding-top: 20px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background: linear-gradient(135deg, #ffffff, #f1f1f1);
+            padding: 25px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            width: 260px;
+            box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, .2);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            background: linear-gradient(135deg, #ece9ff, #ffffff);
+            box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .icon-circle {
+            width: 70px;
+            height: 70px;
+            margin: auto;
+            background: #4c3f91;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            color: white;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        .card h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #2c2c54;
+            line-height: 1.5;
+
+        }
+
+        /* documents require */
+        .documents-requirement {
+            text-align: center;
+            max-width: 100%;
+            margin: auto;
+        }
+
+        .documents-requirement h2 {
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            color: #2c2c54;
+        }
+
+
+        .documents-requirement .desc {
+            font-size: 16px;
+            line-height: 1.7;
+            color: black;
+            max-width: 100%;
+            margin: auto;
+            margin-bottom: 5px;
+
+        }
+
+
+        /* Why Choose Us */
+        .choose-namdev {
+            text-align: center;
+            padding: 20px 10px;
+        }
+
+        .choose-namdev h2 {
+            padding: 10px 0;
+            background: #004aad;
+            color: white;
+            margin-bottom: 20px;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+            gap: 20px;
+            text-align: center;
+            margin: 30px;
+        }
+
+        .feature {
+            background: #d6d5ec;
+            padding: 12px;
+            border-radius: 14px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .feature h5 {
+            color: #000;
+        }
+
+        .feature h6 {
+            padding: 0px 10px 20px 10px;
+        }
+
+        /* Process Steps */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+            text-align: center;
+        }
+
+        .step {
+            background: #fff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .step span {
+            display: inline-block;
+            background: #004aad;
+            color: #fff;
+            padding: 8px 15px;
+            border-radius: 50%;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        /* FAQ */
+        .faqs {
+            text-align: center;
+            color: #000;
+        }
+
+        .faq {
+            max-width: 800px;
+            margin: auto;
+        }
+
+        .faq-item {
+            background: #d6d5ec;
+            margin-bottom: 10px;
+            border-radius: 10px;
+            padding: 15px 20px;
+            box-shadow: black;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .faq-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            font-weight: bold;
+            padding-bottom: 1px;
+
+        }
+
+        .faq-item h4 {
+            margin: 0;
+            font-size: 1rem;
+        }
+
+        .faq-item .icon {
+            font-size: 1.2rem;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+
+
+        /* Hidden answer initially */
+        .faq-item p {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            margin-top: 0;
+            transition: max-height 0.4s ease, opacity 0.3s ease,
+                margin-top 0.3s ease;
+        }
+
+        /* Active State */
+        .faq-item.active p {
+            max-height: 200px;
+            /* Enough space for answer */
+            opacity: 1;
+            margin-top: 10px;
+
+        }
+
+        .faq-item.active .icon {
+            content: "−";
+
+        }
+
+        /* footer */
+
+        .main-footer {
+            font-size: 14px;
+        }
+
+        .have-question {
+            background: url(./question-bg.webp) no-repeat center center / cover;
+            color: white;
+            width: 100%;
+            margin-top: 30px;
+            padding: 30px 40px;
+            text-align: start;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Border on left only on desktop */
+        .bordered-left-md {
+            border-left: none;
+            padding-left: 0;
+        }
+
+        @media (min-width: 768px) {
+            .bordered-left-md {
+                border-left: 2px solid #fff;
+                padding-left: 20px;
+            }
+        }
+
+        .have-question h3 {
+            font-size: 1.5rem !important;
+            line-height: 1.5;
+            font-weight: 600 !important;
+            margin-bottom: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        @media (max-width: 576px) {
+            .have-question h3 {
+                font-size: 1.1rem !important;
+            }
+        }
+
+        .have-question .icon {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .have-question .icon p {
+            margin-bottom: 0;
+            padding-right: 8px;
+            font-weight: 500;
+        }
+
+        /* Social icons */
+        .social-media {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            gap: 0.7rem;
+        }
+
+        .social-media li a {
+            background-color: #fff;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease-in-out;
+        }
+
+        .social-media li a:hover {
+            background-color: #3a3490;
+        }
+
+        .social-media li a i {
+            color: #3a3490;
+            font-size: 14px;
+        }
+
+        .social-media li a:hover i {
+            color: #fff;
+        }
+
+        /* Buttons */
+
+        .fa-facebook-f:before {
+            content: "\f39e";
+        }
+
+        .button.btn-white {
+            background: linear-gradient(180deg, #fff, #fff);
+            color: #000;
+            font-weight: 530;
+            padding: 5px 12px;
+            line-height: 25px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            border-radius: 7px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            margin-left: 10px;
+            font-size: 14px;
+            letter-spacing: 0.8px;
+        }
+
+        .button.btn-white:hover {
+            background: linear-gradient(0deg, #fffee1, #dfdfdf);
+        }
+
+        .button.btn-white i {
+            font-size: 14px;
+        }
+
+        /* FOOTER CTA */
+        /* FOOTER */
+        .footer-area {
+            background: #004aad;
+            padding: 20px 15px;
+            color: #e2e0ee;
+            font-size: 14px;
+        }
+
+        .footer-area a {
+            color: #e2e0ee;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-area a:hover {
+            color: #ec2029;
+        }
+
+        /* Layout */
+        .footer-copyright {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            max-width: 1200px;
+            margin: auto;
+            gap: 10px;
+        }
+
+        /* Left text */
+        .footer-copyright p {
+            margin: 0;
+            flex: 1;
+            text-align: left;
+        }
+
+        /* Right links */
+        .footer-copyright ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer-copyright ul li {
+            position: relative;
+            padding: 0 10px;
+        }
+
+        /* Divider | between links */
+        .footer-copyright ul li:not(:last-child)::after {
+            content: "|";
+            position: absolute;
+            right: -10px;
+            color: #e2e0ee;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .footer-copyright {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .footer-copyright p {
+                text-align: center;
+            }
+
+            .footer-copyright ul {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="/">
+                <img alt="Namfin"
+                    src="https://admin.namfin.in/storage/app/public/images/application/logo/66d6dfc0cfc4c1725358016.svg" />
+            </a>
+        </div>
+
+        <h1 class="navbar-heading">Solar Loan</h1>
+
+
+    </header>
+
+    <!-- Hero -->
+    <div class="hero">
+        <marquee behavior="scroll" direction="left" scrollamount="8">
+            Power your home & business with Solar Loans from
+            <strong>Namdev Finvest Pvt. Ltd.</strong>
+            -Go green with easy finance, quick approval & flexible EMIs!
+        </marquee>
+    </div>
+
+    <!-- Eligibility -->
+    <!-- Eligibility -->
+    <section class="eligibility-section">
+        <h2>Solar Loan Eligibility</h2>
+        <p class="desc">
+            To qualify for a Solar Loan, applicants must own or lease the property where the solar installation will be
+            conducted. Necessary documentation includes proof of identity, address, and the proposed solar project plan.
+            A stable financial background and good credit history enhance the chances of quick approval.
+        </p>
+
+        <div class="eligibility-cards">
+            <div class="card">
+                <div class="icon-circle">⭐</div>
+                <h3>Good Credit Score</h3>
+            </div>
+            <div class="card">
+                <div class="icon-circle">🏠</div>
+                <h3>Property Proof</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Docuement Required-->
+    <section class="Documents Required">
+        <div class="documents-requirement">
+
+            <h2>Documents Required</h2>
+            <p class="desc">
+                Streamline your solar loan application with these essential documents.
+            </p>
+        </div>
+
+        <div class="eligibility-cards">
+            <div class="card">
+                <div class="icon-circle">💡</div>
+                <h3>E-bill</h3>
+            </div>
+            <div class="card">
+                <div class="icon-circle">🪪</div>
+                <h3>KYC</h3>
+            </div>
+            <div class="card">
+                <div class="icon-circle">🔆</div>
+                <h3>Solar Quotation</h3>
+            </div>
+            <div class="card">
+                <div class="icon-circle">💰</div>
+                <h3>Income Proof</h3>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Namdev Finvest -->
+    <section class="choose-namdev">
+        <h2>Why Choose Namdev Finvest</h2>
+        <div class="features">
+            <div class="feature">
+                <h5><b>Fast Approvals</b></h5>
+                <p>Quick turnaround time so you never miss business opportunities.</p>
+            </div>
+            <div class="feature">
+                <h5><b>Competitive Interest</b></h5>
+                <p>Affordable rates designed to support MSME growth.</p>
+            </div>
+            <div class="feature">
+                <h5><b>Flexible Tenure</b></h5>
+                <p>Choose repayment terms that match your cash flow.</p>
+            </div>
+            <div class="feature">
+                <h5><b>Trusted Partner</b></h5>
+                <p>Transparent process with complete data security.</p>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- FAQ -->
+
+    <section class="faqs">
+        <h2>Frequently Asked Questions</h2>
+        <div class="faq">
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <h4><b>What is Solar Finance ?</b></h4>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p style="text-align: left;"> ➤ Solar Finance refers to the loans and financial solutions we offer
+                        to
+                        help individuals and businesses install solar panels and systems, promoting clean and renewable
+                        energy.</p>
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <h4><b>What are the benefits of Solar Finance ?</b></h4>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p style="text-align: left;"> ➤ Applying for a loan with Namdev Finvest is simple. You can either
+                        fill out
+                        our online application form or visit one of our branches. Provide the necessary documents, and
+                        our
+                        team will guide you through the process. </p>
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <h4><b>What are the interest rates and repayment terms for Solar Finance ?</b></h4>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p style="text-align: left;"> ➤ Interest rates and repayment terms vary based on the loan amount,
+                        tenure,
+                        and applicant's credit profile. Contact us for personalized loan offers.</p>
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <h4><b>How much can I borrow for Solar Finance ?</b></h4>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p style="text-align: left;"> ➤ The amount you can borrow depends on the cost of your solar
+                        installation
+                        and your financial profile. Namdev Finvest offers flexible loan amounts to cover most of the
+                        project
+                        cost, ensuring you have the funds you need.</p>
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <h4><b>What is the Collateral for Solar Finance ?</b></h4>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p style="text-align: left;">➤ Solar Finance is Collateral free upto the loan amount of Rs. 25
+                        Lakhs.</p>
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <h4><b>What is the maximum Tenure of Solar Finance Loan ?</b></h4>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p style="text-align: left;">➤ The maximum tenure we offer for Solar Finance is 5 years without
+                        collateral
+                        and 7 years with collateral.</p>
+                </div>
+            </div>
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-header">
+                    <h4><b>Who is eligible for Solar Finance ?</b></h4>
+                    <span class="icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    <p style="text-align: left;">➤ Homeowners, businesses (SEP, SENP), and organizations(Proprietor,
+                        Partnership, Limited company, Private Limited Company, Society and Trust) looking to install
+                        solar
+                        panels can apply for Solar Finance. Eligibility criteria include credit score, income stability,
+                        and
+                        property ownership.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <div class="have-question">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-8 bordered-left-md">
+                    <h3>Have any queries? Reach out to us!</h3>
+                    <div class="icon">
+                        <p>Follow Us on</p>
+                        <ul class="social-media">
+                            <li>
+                                <a href="https://www.facebook.com/namdevfinvest/" target="_blank">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.instagram.com/namdevfinvest/" target="_blank">
+                                    <i class="bi bi-instagram"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.linkedin.com/company/namdevfinvestprivatelimited/" target="_blank">
+                                    <i class="bi bi-linkedin"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.youtube.com/@namdevfinvestpvt.ltd.1330" target="_blank">
+                                    <i class="bi bi-youtube"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-md-4 text-md-end mt-3 mt-md-0 d-flex justify-content-md-end align-items-center gap-1">
+                    <a href="https://www.namfin.in/contact" class="button btn-white">
+                        Contact Us
+                    </a>
+                    <a href="tel:18001035800" class="button btn-white d-flex align-items-center gap-1">
+                        <img src="./media/tel-icon.svg" width="16px" height="16px" alt="" />
+                        <span>1800-103-5800</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer-area">
+        <div class="footer-container">
+            <!-- COPYRIGHT INFO -->
+            <div class="footer-copyright">
+                <p>
+                    Namdev Finvest Pvt Ltd | CIN : U65921RJ1997PTC047090 | Copyright ©
+                    2025
+                </p>
+
+                <!-- LINKS -->
+                <ul>
+                    <li>
+                        <a href="https://namfin.in/resources/mitc">Terms & Conditions</a>
+                    </li>
+                    <li>
+                        <a href="https://namfin.in/privacy-policy">Privacy Policy</a>
+                    </li>
+                    <li><a href="https://namfin.in/disclaimer">Disclaimer</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(item) {
+            const allItems = document.querySelectorAll(".faq-item");
+            allItems.forEach((el) => {
+                if (el !== item) {
+                    el.classList.remove("active");
+                    el.querySelector(".icon").textContent = "+";
+                }
+            });
+
+            item.classList.toggle("active");
+            const icon = item.querySelector(".icon");
+            icon.textContent = item.classList.contains("active") ? "−" : "+";
+        }
+
+
+    </script>
+</body>
+
+</html>
